@@ -1,0 +1,7 @@
+"prefix can be chosen freely. only the exact character length of the prefix must be entered in prefixlength"
+{
+  "token": "YOUR_BOT_TOKEN",
+  "prefix": "=",
+  "prefixlength": 1,
+  "owner": "YOUR_OWN_USER_ID"
+}
