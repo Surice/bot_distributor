@@ -63,8 +63,13 @@ client.on('message', async (msg)=>{
     if(msg.content.startsWith(config.prefix) && msg.author.id != client.user.id){
         var content = msg.content.substr(config.prefixlength).split(' ');
 
-        if(msg.author.id == config.owner && content[0] == "add"){
-            msg.channel.send("which message should be sent?");
+        if(msg.author.id == config.owner){
+            if(content[0] == "create"){
+                msg.channel.send("which message should be sent?");
+            }
+            else if(content[0] == "add"){
+                
+            }
         }
     }
 })
@@ -74,15 +79,31 @@ client.on('messageReactionAdd', async (reaction, user)=>{
 
     if(user.id != client.user.id){
         const monitoring = monMsg(reaction);
-        if(monitoring){
-            console.log("true");
+        if(monitoring != null){
+            const role = await reaction.message.guild.roles.fetch(stor[monitoring][2]);
+            const member = await reaction.message.guild.members.fetch(user.id);
+
+            member.roles.add(role);
+        }
+    }
+})
+client.on('messageReactionRemove', async (reaction, user)=>{
+    if(reaction.message.partial) await reaction.message.fetch();
+
+    if(user.id != client.user.id){
+        const monitoring = monMsg(reaction);
+        if(monitoring != null){
+            const role = await reaction.message.guild.roles.fetch(stor[monitoring][2]);
+            const member = await reaction.message.guild.members.fetch(user.id);
+
+            member.roles.remove(role);
         }
     }
 })
 
 
 function monMsg(reaction){
-    var response = false;
+    var response = null;
 
     stor.forEach(function(element, index){
         if(element.includes(reaction.message.id)){
