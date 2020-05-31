@@ -1,0 +1,23 @@
+{
+  "name": "role-distributor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": ". node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surice/role_distributor%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BDdc_role_distributor.git"
+  },
+  "author": "Surice",
+  "license": "ISC, Private",
+  "bugs": {
+    "url": "https://github.com/surice/role_distributor%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BDdc_role_distributor/issues"
+  },
+  "homepage": "https://github.com/surice/role_distributor%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BD%1B%5BDdc_role_distributor#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
